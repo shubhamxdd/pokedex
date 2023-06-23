@@ -3,14 +3,15 @@ import "./App.css";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  const [query, setquery] = useState("");
+  // remove placeholder
+  const [query, setquery] = useState("pikachu");
   const [pokemons, setPokemons] = useState({
     name: "",
     type: "",
     weight: "",
     img: "",
   });
-  const URL = `https://pokeapi.co/api/v2/pokemon/${query}`;
+  const URL = `https://pokeapi.co/api/v2/pokemon/${query.toLowerCase()}`;
   const fetchPokemons = async () => {
     const response = await fetch(URL);
     const data = await response.json();
@@ -33,7 +34,9 @@ function App() {
     <>
       <div className="header">
         <h1 className="heading">Pokédex</h1>
-        <button className="dm" onClick={toggleDarkMode}>DarkMode</button>
+        <button className="dm" onClick={toggleDarkMode}>
+          DarkMode
+        </button>
       </div>
       <div className="center">
         <div className="input">
@@ -49,22 +52,24 @@ function App() {
             Search
           </button>
         </div>
-        {pokemons.name &&
-          <div className="result">
-            <div className="img">
-              <img src={pokemons.img} alt="" />
+        <div className="resp">
+          {pokemons.name && (
+            <div className="result">
+              <div className="image">
+                <img src={pokemons.img} alt={pokemons.name} className="img" />
+              </div>
+              <div className="name">
+                <h2>{pokemons.name}</h2>
+              </div>
+              <div className="type">
+                <h3>Type: {pokemons.type}</h3>
+              </div>
+              <div className="weight">
+                <h3>Weight: {pokemons.weight}</h3>
+              </div>
             </div>
-            <div className="name">
-              <h2>{pokemons.name}</h2>
-            </div>
-            <div className="type">
-              <h3>Type: {pokemons.type}</h3>
-            </div>
-            {/* <div className="weight">
-              <h3>Weight: {pokemons.weight}</h3>
-            </div> */}
-          </div>
-        }
+          )}
+        </div>
       </div>
     </>
   );
