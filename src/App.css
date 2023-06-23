@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* @font-face {
+  font-family: PokeHo;
+  src: url(Pokemon_Hollow.ttf);
+}
+@font-face {
+  font-family: PokeSo;
+  src: url(Pokemon_Solid.ttf);
+}
+*/
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.heading{
+    color: black;
+}
+
+.header {
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+button{
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: yellow;
+    font-weight: 600;
+}
+.dm{
+    border: 1px solid black;
+}
+
+.center{
+    text-align: center;
+}
+body {
+    background-color: #f2f2f2;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+  }
