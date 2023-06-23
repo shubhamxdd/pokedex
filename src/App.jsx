@@ -3,8 +3,7 @@ import "./App.css";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  // remove placeholder
-  const [query, setquery] = useState("pikachu");
+  const [query, setquery] = useState("");
   const [pokemons, setPokemons] = useState({
     name: "",
     type: "",
