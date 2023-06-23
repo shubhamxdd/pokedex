@@ -10,7 +10,7 @@ function App() {
     weight: "",
     img: "",
   });
-  const URL = `https://pokeapi.co/api/v2/pokemon/${query}`;
+  const URL = `https://pokeapi.co/api/v2/pokemon/${query.toLowerCase()}`;
   const fetchPokemons = async () => {
     const response = await fetch(URL);
     const data = await response.json();
