@@ -1,14 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
-/* @font-face {
-  font-family: PokeHo;
-  src: url(Pokemon_Hollow.ttf);
-}
-@font-face {
-  font-family: PokeSo;
-  src: url(Pokemon_Solid.ttf);
-}
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 body {
   font-family: "Poppins", sans-serif;
@@ -54,27 +44,17 @@ button {
   text-align: center;
 }
 body {
-  background-color: #f2f2f2;
-  color: #333333;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-  background-color: #222222;
-  color: #ffffff;
-}
-
+    background-color: #f2f2f2;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+  }
 .img {
   width: 300px;
   height: 200px;
   object-fit: cover;
 }
-/* .resp{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #f2f2f2;
-  border-radius: 100px;
-  margin: 20px;
-  padding-bottom: 5px;
-} */
